@@ -1,3 +1,4 @@
+// XPath or selector of the Login Page taken from DOM
 export const loginSelectors = {
   emailLabel: '//label[@for="email"]',
   passwordLabel: '//label[@for="password"]',

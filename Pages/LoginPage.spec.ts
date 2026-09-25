@@ -24,7 +24,7 @@ test.describe("Login Page", () => {
       page.locator(loginSelectors.inputPassworldFields)
     ).toBeVisible();
     await page.screenshot({
-      path: "screenshots/login-field-visible.png",
+      path: "screenshots/Login/login-field-visible.png",
       fullPage: true,
     });
   });
@@ -35,7 +35,7 @@ test.describe("Login Page", () => {
     await expect(page.locator(loginSelectors.loginButton)).toBeVisible();
 
     const responsePromise = page.waitForResponse(
-      (response) =>
+      (response: any) =>
         response.url().includes("/login_user") &&
         response.request().method() === "POST"
     );
@@ -59,7 +59,7 @@ test.describe("Login Page", () => {
     await expect(page.locator(loginSelectors.loginButton)).toBeVisible();
 
     const responsePromise = page.waitForResponse(
-      (response) =>
+      (response: any) =>
         response.url().includes("/login_user") &&
         response.request().method() === "POST"
     );
